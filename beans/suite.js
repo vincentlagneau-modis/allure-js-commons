@@ -21,8 +21,8 @@ Suite.prototype.toXML = function() {
             'xmlns:ns2' : 'urn:model.allure.qatools.yandex.ru',
             start: this.start
         },
-        name: this.name,
-        title: this.name,
+        name: this.name + ' - ' + this.testcases[0].parameters[0].value,
+        title: this.name + ' - ' + this.testcases[0].parameters[0].value,
         'test-cases': {
             'test-case': this.testcases.map(function(testcase) {
                 return testcase.toXML();
